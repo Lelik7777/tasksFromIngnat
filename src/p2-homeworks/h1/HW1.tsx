@@ -1,10 +1,17 @@
 import React from 'react'
+import {Message} from './Message';
 
+export type MessageDateType = {
+    avatar: string;
+    name: string;
+    message: string;
+    time: string;
+}
 const messageData = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
     name: 'Some Name',
-    message: 'some text',
-    time: '22:00',
+    message: 'some text ',
+    time: new Date().getUTCHours().toString()+":"+new Date().getMinutes().toString(),
 }
 
 function HW1() {
@@ -13,18 +20,18 @@ function HW1() {
             <hr/>
             homeworks 1
 
-            {/*should work (должно работать)*/}
+            should work (должно работать)
 
-            {/*<Message*/}
-            {/*    avatar={messageData.avatar}*/}
-            {/*    name={messageData.name}*/}
-            {/*    message={messageData.message}*/}
-            {/*    time={messageData.time}*/}
-            {/*/>*/}
+            <Message
+                avatar={messageData.avatar}
+                name={messageData.name}
+                message={messageData.message}
+                time={messageData.time}
+            />
 
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeMessage/>*/}
+            для личного творчества, могу проверить
+         {/*   <AlternativeMessage/>*/}
             <hr/>
         </div>
     )

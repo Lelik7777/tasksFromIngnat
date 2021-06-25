@@ -1,3 +1,13 @@
-.message {
-
+.post{
+    display: grid;
+    width: 50%;
+    grid-template-columns: 2fr 1fr 8fr;
+}
+.post .img img{
+    width: 100px;
+}
+.post .corner{
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle at 0 0,yellow 15px,black 0);
 }
